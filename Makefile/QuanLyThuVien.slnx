@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="QuanLyThuVien/QuanLyThuVien.vcxproj" Id="82d2f451-20c8-4584-8e6e-aec59b5ab2fb" />
+</Solution>
