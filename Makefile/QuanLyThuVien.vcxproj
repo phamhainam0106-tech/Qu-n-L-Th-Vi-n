@@ -20,14 +20,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\AVLNode.h" />
+    <ClInclude Include="..\include\BSTNode.h" />
     <ClInclude Include="..\include\Sach.h" />
-    <ClInclude Include="BSTNode.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\AVLNode.cpp" />
+    <ClCompile Include="..\src\BSTNode.cpp" />
     <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\Sach.cpp" />
-    <ClCompile Include="BSTNode.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
