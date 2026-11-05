@@ -19,13 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\..\DoAnTIn\QuanLyThuVien\include\AVLNode.h" />
-    <ClInclude Include="..\..\..\..\..\..\DoAnTIn\QuanLyThuVien\include\Sach.h" />
+    <ClInclude Include="..\include\AVLNode.h" />
+    <ClInclude Include="..\include\Sach.h" />
+    <ClInclude Include="BSTNode.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\DoAnTIn\QuanLyThuVien\src\AVLNode.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\DoAnTIn\QuanLyThuVien\src\main.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\DoAnTIn\QuanLyThuVien\src\Sach.cpp" />
+    <ClCompile Include="..\src\AVLNode.cpp" />
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\Sach.cpp" />
+    <ClCompile Include="BSTNode.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
@@ -51,7 +53,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v145</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">

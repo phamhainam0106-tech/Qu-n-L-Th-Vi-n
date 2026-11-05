@@ -23,13 +23,13 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\DoAnTIn\QuanLyThuVien\src\Sach.cpp">
+    <ClCompile Include="..\src\Sach.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\DoAnTIn\QuanLyThuVien\src\AVLNode.cpp">
+    <ClCompile Include="..\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\DoAnTIn\QuanLyThuVien\src\main.cpp">
+    <ClCompile Include="..\src\AVLNode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
