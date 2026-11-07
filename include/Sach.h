@@ -11,9 +11,9 @@ struct Sach {
 	string tenSach;
 	string tacGia;
 	string theLoai;
-	int namxuatBan;
-	int soLuongCon;
-	int soLuong;
+	int namxuatBan=0;
+	int soLuongCon=0;
+	int soLuong=0;
 
 };
 
