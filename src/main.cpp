@@ -38,6 +38,7 @@ void main()
         cout << "==================================\n";
         cout << "Vui long chon chuc nang: ";
         cin >> chon;
+        cin.ignore();
 
         switch (chon)
         {
@@ -62,7 +63,7 @@ void main()
             {
                 cout << "\nSua sach thanh cong:\n";
             }
-            else cout << "\nSach khong ton tai:\n";
+            else cout << "\nSach khong ton tai:";
             break;
 
         case 4:

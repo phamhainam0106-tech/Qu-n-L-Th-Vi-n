@@ -14,27 +14,43 @@ void nhapSach(Sach& s)
 	cin >> s.namxuatBan;
 	cout << "\nNhap so luong: ";
 	cin >> s.soLuong;
+	cin.ignore();
 	s.soLuongCon = s.soLuong;
 }
 
 void nhapISBN(AVLNodeptr root, Sach& s)
-{/*
-	do
-	{*/
+{
+	string isbn;
+	while (true)
+	{
+		cout << "\nNhap ma ISBN: ";
+		getline(cin, isbn);
 
-	
-	cin.ignore();
-	cout << "\nNhap ma ISBN: ";
-	getline(cin, s.ISBN);// getline để nhận luôn khoảng trắng
-	/*if (timAVLNode(root, s.ISBN) == NULL && !s.ISBN.empty())
-	{
-		break;
+		// kiểm tra có ký tự nào khác dấu cách không
+		bool hopLe = false;
+		for (int i = 0; i < isbn.length(); i++)
+		{
+			if (isbn[i] != ' ')
+			{
+				hopLe = true;
+				break;
+			}
+		}
+
+		if (hopLe == false)
+		{
+			cout << "ISBN khong duoc de trong hoac chi chua dau cach, hay nhap lai!";
+		}
+		else if (timAVLNode(root, isbn) != NULL)
+		{
+			cout << "ISBN da ton tai, hay nhap lai!";
+		}
+		else
+		{
+			s.ISBN = isbn;
+			break;
+		}
 	}
-	else
-	{
-		cout << "\nISBN trung hoặc bi bo trong, hay nhap lai";
-	}
-	} while (true);*/
 }
 bool themSach(AVLNodeptr& root, Sach s)
 {
@@ -51,6 +67,7 @@ bool xoaSach(AVLNodeptr& root, Sach s)
 {
 	cout << "\nNhap ma sach muon xoa: ";
 	cin >> s.ISBN;
+	cin.ignore();
 	if (timAVLNode(root, s.ISBN) != NULL)
 	{
 		root = xoaAVLNode(root, s.ISBN);
@@ -62,9 +79,11 @@ bool suaSach(AVLNodeptr& root, Sach s)
 {
 	cout << "\nNhap ma sach muon sua: ";
 	cin >> s.ISBN;
-	if (timAVLNode(root, s.ISBN) != NULL)
+	cin.ignore();
+	AVLNodeptr p = timAVLNode(root, s.ISBN);
+	if (p != NULL)
 	{
-		AVLNodeptr p = timAVLNode(root, s.ISBN);
+		
 		nhapSach(p->data);
 		return true;
 	}
@@ -76,6 +95,7 @@ AVLNodeptr timSach(AVLNodeptr root, string mas)
 
 	cout << "\nNhap ma sach muon tim: ";
 	cin >> mas;
+	cin.ignore();
 	if (timAVLNode(root, mas) != NULL)
 	{
 		xuatSach(timAVLNode(root, mas)->data);
