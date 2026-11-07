@@ -1,3 +1,4 @@
+#include "../include/BSTNode.h"
 #include"../include/AVLNode.h"
 
 void main()
@@ -34,6 +35,7 @@ void main()
         cout << "3. Sua sach\n";
         cout << "4. Tim kiem sach\n";
         cout << "5. Duyet thu vien\n";
+        cout << "6. In danh muc sach\n";
         cout << "0. Quay lai menu chinh\n";
         cout << "==================================\n";
         cout << "Vui long chon chuc nang: ";
@@ -76,7 +78,9 @@ void main()
         case 5:
             LNR(root);
             break;
-
+        case 6:
+            inDanhMuc(root);
+            break;
         case 0:
             cout << "Dang quay lai menu chinh...\n";
             break;

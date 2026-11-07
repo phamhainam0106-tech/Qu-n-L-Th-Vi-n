@@ -15,21 +15,27 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\..\DoAnTIn\QuanLyThuVien\include\Sach.h">
+    <ClInclude Include="..\include\AVLNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\..\..\DoAnTIn\QuanLyThuVien\include\AVLNode.h">
+    <ClInclude Include="..\include\Sach.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\BSTNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\DoAnTIn\QuanLyThuVien\src\Sach.cpp">
+    <ClCompile Include="..\src\Sach.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\DoAnTIn\QuanLyThuVien\src\AVLNode.cpp">
+    <ClCompile Include="..\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\DoAnTIn\QuanLyThuVien\src\main.cpp">
+    <ClCompile Include="..\src\AVLNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\BSTNode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
