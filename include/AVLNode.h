@@ -8,8 +8,9 @@ struct AVLNode {
 	AVLNode* right;
 	int height;
 };
-
 typedef AVLNode* AVLNodeptr;
+
+
 void initAVL(AVLNodeptr& root);
 bool isEmpty(AVLNodeptr root);
 AVLNodeptr taoAVLNode(Sach s);

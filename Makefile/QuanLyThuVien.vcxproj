@@ -21,12 +21,18 @@
   <ItemGroup>
     <ClInclude Include="..\include\AVLNode.h" />
     <ClInclude Include="..\include\BSTNode.h" />
+    <ClInclude Include="..\include\DocGia.h" />
+    <ClInclude Include="..\include\HashTable.h" />
+    <ClInclude Include="..\include\Menu.h" />
     <ClInclude Include="..\include\Sach.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\AVLNode.cpp" />
     <ClCompile Include="..\src\BSTNode.cpp" />
+    <ClCompile Include="..\src\DocGia.cpp" />
+    <ClCompile Include="..\src\HashTable.cpp" />
     <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\Menu.cpp" />
     <ClCompile Include="..\src\Sach.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
