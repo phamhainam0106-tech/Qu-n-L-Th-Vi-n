@@ -6,8 +6,9 @@ void main()
 {
 	AVLNodeptr AVLroot = NULL;
 	BSTNodeptr BSTroot = NULL;
-
+    LinkNodeptr LinkNoderoot = NULL;
 	HashNodeptr hashTable[SIZE] = { NULL };
+    int pso = 0;;
     int chon;
     do
     {
@@ -16,6 +17,7 @@ void main()
         cout << "========== QUAN LY THU VIEN ==========\n";
         cout << "1. Quan ly sach\n";
         cout << "2. Quan ly doc gia\n";
+        cout << "3. Quan ly phieu muon\n";
         cout << "0. Thoat chuong trinh\n";
         cout << "======================================\n";
         cout << "Vui long chon chuc nang: ";
@@ -30,6 +32,8 @@ void main()
         case 2:
             hienMenuqlyDocGia(hashTable);
             break;
+        case 3:
+            quanLyPhieuMuon(LinkNoderoot, hashTable, AVLroot, pso);
         case 0:
             cout << "Cam mon!\n";
             break;

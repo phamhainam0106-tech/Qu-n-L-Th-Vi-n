@@ -23,7 +23,9 @@
     <ClInclude Include="..\include\BSTNode.h" />
     <ClInclude Include="..\include\DocGia.h" />
     <ClInclude Include="..\include\HashTable.h" />
+    <ClInclude Include="..\include\Linklist.h" />
     <ClInclude Include="..\include\Menu.h" />
+    <ClInclude Include="..\include\phieumuon.h" />
     <ClInclude Include="..\include\Sach.h" />
   </ItemGroup>
   <ItemGroup>
@@ -31,8 +33,10 @@
     <ClCompile Include="..\src\BSTNode.cpp" />
     <ClCompile Include="..\src\DocGia.cpp" />
     <ClCompile Include="..\src\HashTable.cpp" />
+    <ClCompile Include="..\src\Linklist.cpp" />
     <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\Menu.cpp" />
+    <ClCompile Include="..\src\phieumuon.cpp" />
     <ClCompile Include="..\src\Sach.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

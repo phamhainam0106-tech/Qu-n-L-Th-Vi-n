@@ -26,7 +26,6 @@ void nhapISBN(AVLNodeptr root, Sach& s)
 		cout << "\nNhap ma ISBN: ";
 		getline(cin, isbn);
 
-		// kiểm tra có ký tự nào khác dấu cách không
 		bool hopLe = false;
 		for (int i = 0; i < isbn.length(); i++)
 		{

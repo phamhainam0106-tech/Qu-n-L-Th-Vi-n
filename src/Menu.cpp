@@ -1,14 +1,13 @@
 
+#include"../include/Menu.h"
 #include "../include/BSTNode.h"
 #include"../include/AVLNode.h"
 #include"../include/HashTable.h"
-#include"../include/Menu.h"
-
-void hienMenuqlySach(AVLNodeptr root)
+#include"../include/Linklist.h"
+void hienMenuqlySach(AVLNodeptr& root)
 {
     
     Sach s;
-    initAVL(root);
     int chon;
     do
     {
@@ -158,5 +157,107 @@ void hienMenuqlyDocGia(HashNodeptr hashTable[SIZE])
             cin.get();
         }
 
+    } while (chon != 0);
+}
+
+
+void quanLyPhieuMuon(LinkNodeptr& root, HashNodeptr hashTable[SIZE],AVLNodeptr avlroot, int& n )
+{
+    int chon;
+    PhieuMuon pm;
+    string isbn;
+    string cmnd;
+    do
+    {
+        system("cls");
+
+        cout << "========== QUAN LY PHIEU MUON ==========\n";
+        cout << "1. Them phieu muon\n";
+        cout << "2. Xoa phieu muon\n";
+        cout << "3. Tim kiem phieu muon\n";
+        cout << "4. Xuat danh sach phieu muon\n";
+        cout << "0. Quay lai menu chinh\n";
+        cout << "========================================\n";
+        cout << "Vui long chon chuc nang: ";
+        cin >> chon;
+        cin.ignore();
+
+        switch (chon)
+        {
+        case 1:
+            
+            do
+            {
+                NhapCCCD(cmnd);
+                HashNodeptr p = timHNode(hashTable, cmnd);
+                if (p == NULL)
+                {
+                    cout << "\nDoc gia chua dang ki";
+                    continue;
+                }
+                else
+                    break;
+            } while (true);
+
+            
+            do
+            {
+                cout << "\nNhap isbn :";
+                cin >> isbn;
+                cin.ignore();
+                AVLNodeptr avl = timAVLNode(avlroot, isbn);
+                if (avl == NULL)
+                {
+                    cout << "\nsach khong ton tai ";
+                    continue;
+                }
+                else
+                {
+
+                    break;
+                }
+            } while (true);
+
+            Nhapphieumuon(pm, isbn, cmnd, n);
+            themPhieuMuon(root, pm);
+            system("pause");
+
+
+            break;
+        case 2:
+            cout << "\nNhap ma phieu muon ";
+            cin >> pm.maPhieu;
+
+            xoaPhieumuon(root, pm.maPhieu);
+            system("pause");
+        
+            break;
+        case 3:
+            cout << "\nNhap ma phieu muon muon tim ";
+            cin >> pm.maPhieu;
+            
+            if (timPhieuMuon(root, pm.maPhieu) != NULL)
+            {
+                cout << "\ntim thay phieu muon ";
+                xuatphieumuon(timPhieuMuon(root, pm.maPhieu)->data);
+                system("pause");
+            }
+            else
+            {
+                cout << "\nKhong tim thay phieu muon ";
+            }
+            break;
+        case 4:
+        {
+            xuatdspm(root);
+            system("pause");
+        }
+            break;
+        case 0:
+            break;
+        default:
+            cout << "Lua chon khong hop le!\n";
+            system("pause");
+        }
     } while (chon != 0);
 }
