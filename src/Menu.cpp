@@ -4,6 +4,8 @@
 #include"../include/AVLNode.h"
 #include"../include/HashTable.h"
 #include"../include/Linklist.h"
+#include "../include/DynamicArray.h"
+
 void hienMenuqlySach(AVLNodeptr& root)
 {
     
@@ -161,7 +163,7 @@ void hienMenuqlyDocGia(HashNodeptr hashTable[SIZE])
 }
 
 
-void quanLyPhieuMuon(LinkNodeptr& root, HashNodeptr hashTable[SIZE],AVLNodeptr avlroot, int& n )
+void quanLyPhieuMuon(LinkNodeptr& root, HashNodeptr hashTable[SIZE],AVLNodeptr avlroot, int& n, DynamicArray& dsGiaoDich)
 {
     int chon;
     PhieuMuon pm;
@@ -176,6 +178,7 @@ void quanLyPhieuMuon(LinkNodeptr& root, HashNodeptr hashTable[SIZE],AVLNodeptr a
         cout << "2. Xoa phieu muon\n";
         cout << "3. Tim kiem phieu muon\n";
         cout << "4. Xuat danh sach phieu muon\n";
+        cout << "5. Xem lich su giao dich\n";
         cout << "0. Quay lai menu chinh\n";
         cout << "========================================\n";
         cout << "Vui long chon chuc nang: ";
@@ -208,7 +211,7 @@ void quanLyPhieuMuon(LinkNodeptr& root, HashNodeptr hashTable[SIZE],AVLNodeptr a
                 AVLNodeptr avl = timAVLNode(avlroot, isbn);
                 if (avl == NULL)
                 {
-                    cout << "\nsach khong ton tai ";
+                    cout << "\nSach Khong Ton Tai ";
                     continue;
                 }
                 else
@@ -220,6 +223,7 @@ void quanLyPhieuMuon(LinkNodeptr& root, HashNodeptr hashTable[SIZE],AVLNodeptr a
 
             Nhapphieumuon(pm, isbn, cmnd, n);
             themPhieuMuon(root, pm);
+            dsGiaoDich.themGiaoDich(pm);
             system("pause");
 
 
@@ -238,7 +242,7 @@ void quanLyPhieuMuon(LinkNodeptr& root, HashNodeptr hashTable[SIZE],AVLNodeptr a
             
             if (timPhieuMuon(root, pm.maPhieu) != NULL)
             {
-                cout << "\ntim thay phieu muon ";
+                cout << "\nTim thay phieu muon ";
                 xuatphieumuon(timPhieuMuon(root, pm.maPhieu)->data);
                 system("pause");
             }
@@ -252,6 +256,10 @@ void quanLyPhieuMuon(LinkNodeptr& root, HashNodeptr hashTable[SIZE],AVLNodeptr a
             xuatdspm(root);
             system("pause");
         }
+            break;
+        case 5:
+            dsGiaoDich.hienThiGiaoDich();
+            system("pause");
             break;
         case 0:
             break;

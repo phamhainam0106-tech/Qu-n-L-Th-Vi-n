@@ -8,6 +8,7 @@ void main()
 	BSTNodeptr BSTroot = NULL;
     LinkNodeptr LinkNoderoot = NULL;
 	HashNodeptr hashTable[SIZE] = { NULL };
+    DynamicArray dsGiaoDich;
     int pso = 0;;
     int chon;
     do
@@ -33,7 +34,7 @@ void main()
             hienMenuqlyDocGia(hashTable);
             break;
         case 3:
-            quanLyPhieuMuon(LinkNoderoot, hashTable, AVLroot, pso);
+            quanLyPhieuMuon(LinkNoderoot, hashTable, AVLroot, pso, dsGiaoDich);
         case 0:
             cout << "Cam mon!\n";
             break;
